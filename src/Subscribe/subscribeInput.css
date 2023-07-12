@@ -1,0 +1,92 @@
+.entireContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f5f5f5;
+    
+  }
+  
+
+  form {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  form > *:not(:last-child) {
+    margin-right: 20px; /* Adjust the value of spaces in between the elements :)  */
+  }
+  
+
+  .subscribeContainer {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 16px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .subscribeInput {
+    margin-bottom: 20px;
+    background-color: rgb(255, 255, 255);
+    padding: 1px;
+ 
+  }
+  
+  h3 {
+    margin: 0;
+    color: #333333;
+    font-size: 35px;
+    font-family: Roboto';
+    
+  }
+  .inputLabel {
+    font-family: 'Kaushan Script', cursive;
+    font-size: 30px;
+    
+  }
+ .getTasty {
+    display: flex;
+    flex-direction: column;
+    margin:0;
+    align-items:baseline;
+ }
+  .submitEmailButton{
+  
+    margin:0;
+    margin-top: 20px;
+  }
+  .inputText {
+    padding: 5px;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    width:250px
+   
+   
+  }
+  
+  .buttonContainer {
+    display: flex;
+    justify-content: center;
+  }
+  
+  button {
+  
+    padding: 5px 15px;
+    background-color: #ff7d27;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 40px;
+    
+ 
+   
+  }
+  
+  button:hover {
+    background-color: #f49b41;
+    
+  }
+  
