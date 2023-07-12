@@ -1,9 +1,10 @@
 import { NavLink } from 'react-router-dom';
 import { webPaths } from '../../routes/webPaths';
+import './Navigation.css';
 
 export const Navigation = () => {
   return (
-    <>
+    <div className="nav">
       <NavLink
         to={webPaths.home}
         className={({ isActive, isPending }) =>
@@ -28,6 +29,6 @@ export const Navigation = () => {
       >
         Info
       </NavLink>
-    </>
+    </div>
   );
 };
