@@ -1,0 +1,33 @@
+.workshopHeader {
+  font-size: 2rem;
+  text-align: center;
+  font-family: 'Dosis', sans-serif;
+  font-weight: 800;
+}
+
+.workshopDiv {
+  width: 90vw;
+  margin: auto;
+  border-top-right-radius: 40px;
+  border-bottom-right-radius: 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  background-color: rgb(255, 174, 44);
+}
+
+.workshopImage {
+  border-radius: 50px;
+  width: auto;
+  height: 320px;
+  padding: 1rem;
+}
+
+.workshopText {
+  margin: 0;
+  padding: 2rem;
+  color: white;
+  font-size: 1.25rem;
+  font-family: 'Dosis', sans-serif;
+  font-weight: 800;
+}
