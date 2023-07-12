@@ -7,10 +7,7 @@ export const Home = () => {
   getRecipe();
   return (
     <DefaultLayout>
-
       <h1>Home</h1>
-
-     
       <Hero />
       <Workshop />
     </DefaultLayout>
