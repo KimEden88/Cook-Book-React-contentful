@@ -1,10 +1,9 @@
 import { Hero } from '../components/Hero/Hero';
-import { getRecipe } from '../components/contentful/recipes';
+// import Card from '../components/card/Card';
 import { DefaultLayout } from '../components/layouts/DefaultLayout';
 import Workshop from '../components/workshop/Workshop.jsx';
 
 export const Home = () => {
-  getRecipe();
   return (
     <DefaultLayout>
       <h1>Home</h1>

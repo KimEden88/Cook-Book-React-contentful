@@ -3,6 +3,6 @@ import { client } from './client';
 export const getRecipe = async () => {
   client
     .getEntries()
-    .then((entry) => console.log(entry))
-    .catch(console.error);
+    .then((data) => console.log(data))
+    .catch((error) => console.log(error));
 };
