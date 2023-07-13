@@ -9,11 +9,12 @@ export const SubscribeInput = () => {
         </div>
       </div>
       <div className="inputContainer">
-
-        
         <form>
           <div className="getTasty">
-            <label className="inputLabel" htmlFor="email">
+            <label
+              className="inputLabel"
+              htmlFor="email"
+            >
               Get new tasty recipes as they come
             </label>
 
@@ -28,9 +29,8 @@ export const SubscribeInput = () => {
             <div className="submitEmailButton">
               <button>Submit</button>
             </div>
-
           </div>
-        </div>
+        </form>
       </div>
     </div>
   );

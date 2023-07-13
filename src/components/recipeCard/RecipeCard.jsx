@@ -13,8 +13,19 @@ export const RecipeCard = () => {
   }, []);
 
   return (
-    <>
-      {recipes && recipes.items.map((item) => console.log(item.fields.title))}
-    </>
+    <div>
+      {recipes &&
+        recipes.items.map((item) => (
+          <div key={item.fields.id}>
+            <h2>{item.fields.title}</h2>
+            <img
+              src={item.fields.image}
+              className="App-logo"
+              alt="logo"
+            />
+            <p className="cardDesription">{item.fields.description}</p>
+          </div>
+        ))}
+    </div>
   );
 };
