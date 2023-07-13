@@ -1,4 +1,3 @@
-import React from 'react';
 import './Workshop.css';
 import Team from './maximg/Team.jpg';
 

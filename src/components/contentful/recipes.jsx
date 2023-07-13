@@ -1,8 +1,9 @@
-import { client } from './client';
+// import { client } from './client';
 
-export const getRecipe = async () => {
-  client
-    .getEntries()
-    .then((data) => console.log(data))
-    .catch((error) => console.log(error));
-};
+// // };
+// export const getRecipe = async () => {
+//   client
+//     .getEntries()
+//     .then((data) => console.log(data))
+//     .catch((error) => console.log(error));
+// };
