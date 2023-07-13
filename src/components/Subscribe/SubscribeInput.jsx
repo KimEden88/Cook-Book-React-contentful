@@ -1,4 +1,4 @@
-import "./subscribeInput.css";
+import './subscribeInput.css';
 
 export const SubscribeInput = () => {
   return (
@@ -9,6 +9,8 @@ export const SubscribeInput = () => {
         </div>
       </div>
       <div className="inputContainer">
+
+        
         <form>
           <div className="getTasty">
             <label className="inputLabel" htmlFor="email">
@@ -26,8 +28,9 @@ export const SubscribeInput = () => {
             <div className="submitEmailButton">
               <button>Submit</button>
             </div>
+
           </div>
-        </form>
+        </div>
       </div>
     </div>
   );

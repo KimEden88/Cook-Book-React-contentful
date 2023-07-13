@@ -1,8 +1,5 @@
-import { client } from './client';
+// import { client } from './client';
 
-export const getRecipe = async () => {
-  client
-    .getEntries()
-    .then((entry) => console.log(entry))
-    .catch(console.error);
-};
+// export const getRecipe = async () => {
+
+// };
