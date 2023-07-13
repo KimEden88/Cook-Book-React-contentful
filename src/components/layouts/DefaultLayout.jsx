@@ -1,5 +1,6 @@
-import { Navigation } from '../navigation/Navigation';
-import './DefaultLayout.css';
+import { Navigation } from "../navigation/Navigation";
+import "./DefaultLayout.css";
+import PropTypes from "prop-types";
 
 export const DefaultLayout = ({ children }) => {
   return (
@@ -12,4 +13,7 @@ export const DefaultLayout = ({ children }) => {
       <footer>This is my footer</footer>
     </div>
   );
+};
+DefaultLayout.propTypes = {
+  children: PropTypes.node.isRequired,
 };

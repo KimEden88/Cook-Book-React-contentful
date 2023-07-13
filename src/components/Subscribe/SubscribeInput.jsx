@@ -14,16 +14,15 @@ export const SubscribeInput = () => {
             <label className="inputLabel" htmlFor="email">
               Get new tasty recipes as they come
             </label>
-
-            <input
-              className="inputText"
-              type="email"
-              id="email"
-              pattern=".+@gmail\.com"
-              required
-            />
-
             <div className="submitEmailButton">
+              <input
+                className="inputText"
+                type="email"
+                id="email"
+                pattern=".+@gmail\.com"
+                required
+              />
+
               <button>Submit</button>
             </div>
           </div>
