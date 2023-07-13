@@ -9,18 +9,26 @@ export const SubscribeInput = () => {
         </div>
       </div>
       <div className="inputContainer">
-        <div className="getTasty">
-          <label htmlFor="email">Email:</label>
-          Get new tasty recipes as they come
-          <div className="submitEmailButton">
+
+        
+        <form>
+          <div className="getTasty">
+            <label className="inputLabel" htmlFor="email">
+              Get new tasty recipes as they come
+            </label>
+
             <input
-              name="email"
-              id="email"
+              className="inputText"
               type="email"
-              autoComplete="off"
+              id="email"
+              pattern=".+@gmail\.com"
+              required
             />
 
-            <button>Submit</button>
+            <div className="submitEmailButton">
+              <button>Submit</button>
+            </div>
+
           </div>
         </div>
       </div>
