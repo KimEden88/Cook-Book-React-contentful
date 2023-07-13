@@ -1,13 +1,21 @@
+
 import { SubscribeInput } from "../Subscribe/SubscribeInput";
 import { getRecipe } from "../components/contentful/recipes";
 import { DefaultLayout } from "../components/layouts/DefaultLayout";
+import { Hero } from '../components/Hero/Hero';
+import { getRecipe } from '../components/contentful/recipes';
+import { DefaultLayout } from '../components/layouts/DefaultLayout';
+import Workshop from '../components/workshop/Workshop.jsx';
+
 
 export const Home = () => {
   getRecipe();
   return (
-    <DefaultLayout>
+ <DefaultLayout>
       <h1>Home</h1>
-      <SubscribeInput />
+      <Hero />
+      <Workshop />
+ <SubscribeInput />
     </DefaultLayout>
   );
 };

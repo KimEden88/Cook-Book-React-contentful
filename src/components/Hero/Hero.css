@@ -1,0 +1,23 @@
+.hero {
+  text-align: center;
+  background: linear-gradient(
+    0deg,
+    rgba(217, 143, 42, 1) 0%,
+    rgba(253, 187, 45, 1) 100%
+  );
+  max-width: 70%;
+  margin: auto;
+  padding: 5rem;
+  border-radius: 22px;
+  color: aliceblue;
+}
+
+h1 {
+  font-weight: 700;
+  font-size: 4rem;
+}
+
+p {
+  font-weight: 500;
+  font-size: 1.5rem;
+}
