@@ -9,7 +9,7 @@ export const RecipeCard = () => {
   useEffect(() => {
     client
       .getEntries()
-      .then((entries) => setRecipes(entries.items))
+      .then((entries) => setRecipes(entries))
       .catch(console.error);
   }, []);
 
