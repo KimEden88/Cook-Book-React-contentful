@@ -1,8 +1,7 @@
 import './RecipeCard.css';
 import { client } from '../contentful/client';
 import { useEffect, useState } from 'react';
-import React from 'react';
-import { Link, NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 export const RecipeCard = () => {
   const [recipes, setRecipes] = useState(null);
@@ -15,20 +14,18 @@ export const RecipeCard = () => {
   }, []);
 
   return (
-    <div>
+    <div id="recipe">
       {recipes &&
-        recipes.map((item) => (
-          <div key={item.fields.id}>
+        recipes.items.map((item) => (
+          <div key={item.sys.id}>
             <h2>{item.fields.title}</h2>
             <img
-              src={item.fields.image}
+              src={`https:` + item.fields.image.fields.file.url}
               className="App-logo"
               alt="logo"
             />
-            <p className="cardDescription">{item.fields.description}</p>
-            <Link to="/Recipe">
-              <button>To Recipe</button>
-            </Link>
+            <p className="cardDesription">{item.fields.description}</p>
+            <Link to={`/recipe/${item.sys.id}`}>Go to Recipe</Link>
           </div>
         ))}
     </div>
