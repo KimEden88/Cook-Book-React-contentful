@@ -1,5 +1,5 @@
 export const webPaths = {
   home: '/',
-  recipe: '/recipe',
+  recipe: '/recipe/:id',
   info: '/info',
 };

@@ -1,11 +1,49 @@
-import { DefaultLayout } from "../components/layouts/DefaultLayout";
+import { useParams } from 'react-router-dom';
+import { DefaultLayout } from '../components/layouts/DefaultLayout';
+import { client } from '../components/contentful/client';
+import { useEffect, useState } from 'react';
 
 export const Recipe = () => {
+  const { id } = useParams();
+  const [recipe, setRecipe] = useState('');
+
+  useEffect(() => {
+    client
+      .getEntry(id)
+      .then((entry) => setRecipe(entry))
+      .catch(console.error);
+  }, [id]);
+
+  console.log(recipe);
+
   return (
-    <DefaultLayout>
-      <div>
-        <h1>Recipe</h1>
-      </div>
-    </DefaultLayout>
+    recipe && (
+      <DefaultLayout>
+        <div className="outerRecipe">
+          <h1>{recipe.fields.title}</h1>
+          <div className="upperRecipe">
+            <p>{recipe.fields.description}</p>
+            <img
+              src={`https:` + recipe.fields.image.fields.file.url}
+              alt={recipe.fields.title}
+            />
+          </div>
+          <div className="lowerRecipe">
+            {recipe.fields.ingredients.map((item) => {
+              return (
+                <div key={recipe.fields.title[item]}>
+                  <input
+                    type="checkbox"
+                    value={item}
+                  />
+                  {item}
+                </div>
+              );
+            })}
+            <p>{recipe.fields.process}</p>
+          </div>
+        </div>
+      </DefaultLayout>
+    )
   );
 };

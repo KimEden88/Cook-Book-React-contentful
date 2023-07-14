@@ -13,14 +13,7 @@ export const Navigation = () => {
       >
         Home
       </NavLink>
-      <NavLink
-        to={webPaths.recipe}
-        className={({ isActive, isPending }) =>
-          isPending ? 'pending' : isActive ? 'active' : ''
-        }
-      >
-        Recipe
-      </NavLink>
+      <a href="#recipe">Recipes</a>
       <NavLink
         to={webPaths.info}
         className={({ isActive, isPending }) =>
