@@ -1,6 +1,8 @@
 import './RecipeCard.css';
 import { client } from '../contentful/client';
 import { useEffect, useState } from 'react';
+import React from 'react';
+import { Link, NavLink } from 'react-router-dom';
 
 export const RecipeCard = () => {
   const [recipes, setRecipes] = useState(null);
@@ -8,14 +10,14 @@ export const RecipeCard = () => {
   useEffect(() => {
     client
       .getEntries()
-      .then((entries) => setRecipes(entries))
+      .then((entries) => setRecipes(entries.items))
       .catch(console.error);
   }, []);
 
   return (
     <div>
       {recipes &&
-        recipes.items.map((item) => (
+        recipes.map((item) => (
           <div key={item.fields.id}>
             <h2>{item.fields.title}</h2>
             <img
@@ -23,7 +25,10 @@ export const RecipeCard = () => {
               className="App-logo"
               alt="logo"
             />
-            <p className="cardDesription">{item.fields.description}</p>
+            <p className="cardDescription">{item.fields.description}</p>
+            <Link to="/Recipe">
+              <button>To Recipe</button>
+            </Link>
           </div>
         ))}
     </div>
