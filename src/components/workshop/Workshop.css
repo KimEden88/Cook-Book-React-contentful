@@ -1,28 +1,36 @@
 .workshopHeader {
   font-size: 3rem;
   text-align: center;
-  text-decoration: underline;
-  color: rgb(255, 174, 44);
-  font-family: 'Dosis', sans-serif;
+
+  color: white;
   font-weight: 800;
 }
 
 .workshopDiv {
-  width: 90vw;
-  margin: auto;
+  margin: 5rem auto;
   border-radius: 40px;
   display: flex;
-  flex-direction: row;
   align-items: center;
   justify-content: space-evenly;
-  background-color: rgb(255, 174, 44);
+  flex-direction: column;
+  background: linear-gradient(
+    0deg,
+    rgba(217, 143, 42, 1) 0%,
+    rgba(253, 187, 45, 1) 100%
+  );
 }
 
 .workshopImage {
   border-radius: 50px;
-  width: auto;
-  height: 300px;
+  max-width: 700px;
+  height: auto;
   padding: 2rem;
+}
+
+.info {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
 }
 
 .workshopText {
@@ -32,4 +40,35 @@
   font-size: 1.5rem;
   font-family: 'Dosis', sans-serif;
   font-weight: 800;
+}
+span {
+  display: block;
+  margin-top: 2rem;
+}
+
+@media only screen and (max-width: 1500px) {
+  /* For smaller: */
+  .info {
+    flex-wrap: wrap;
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 850px) {
+  /* For smaller: */
+  .workshopImage {
+    max-width: 400px;
+    height: auto;
+  }
+  .workshopDiv {
+    margin: auto;
+    border-radius: 0;
+  }
+  .workshopHeader {
+    font-size: 2.5rem;
+    text-align: center;
+
+    color: white;
+    font-weight: 800;
+  }
 }

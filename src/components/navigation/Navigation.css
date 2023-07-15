@@ -3,24 +3,32 @@
   list-style: none;
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: flex-start;
   margin-right: 3rem;
-  /* position: fixed;
-  top: 0;
   width: 100%;
-  background-color: black; */
+
+  margin-bottom: 3rem;
+  padding: 0.3rem;
 }
 
 .nav a {
   text-decoration: none;
   margin-right: 1rem;
-  color: orangered;
+  color: #fdbb2d;
+
   font-weight: 600;
-  border: 1px solid orangered;
+  border: 2.5px solid #fdbb2d;
   border-radius: 10px;
   padding: 0.5rem 1rem;
 }
 
-.active {
-  background-color: whitesmoke;
+a.active {
+  color: whitesmoke;
+  background-color: #fdbb2d;
+  border: 2.5px solid whitesmoke;
+  transform: scale(110%);
+}
+
+a:hover {
+  transform: scale(110%);
 }

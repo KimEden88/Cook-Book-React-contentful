@@ -8,7 +8,6 @@ import { SubscribeInput } from '../components/Subscribe/SubscribeInput';
 export const Home = () => {
   return (
     <DefaultLayout>
-      <h1>Home</h1>
       <Hero />
       <Workshop />
       <SubscribeInput />
