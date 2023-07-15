@@ -5,11 +5,13 @@
     rgba(217, 143, 42, 1) 0%,
     rgba(253, 187, 45, 1) 100%
   );
-  max-width: 70%;
-  margin: auto;
-  padding: 5rem;
+  height: 30vh;
   border-radius: 22px;
   color: aliceblue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
 h1 {
@@ -20,4 +22,21 @@ h1 {
 p {
   font-weight: 500;
   font-size: 1.5rem;
+}
+
+@media only screen and (max-width: 850px) {
+  /* For smaller: */
+  .hero {
+    border-radius: 0;
+    margin-bottom: 1rem;
+  }
+
+  h1 {
+    font-weight: 800;
+    font-size: 3rem;
+  }
+  p {
+    font-weight: 400;
+    font-size: 1rem;
+  }
 }
