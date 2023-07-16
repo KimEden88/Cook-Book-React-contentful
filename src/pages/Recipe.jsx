@@ -1,11 +1,11 @@
-import { useParams } from 'react-router-dom';
-import { DefaultLayout } from '../components/layouts/DefaultLayout';
-import { client } from '../components/contentful/client';
-import { useEffect, useState } from 'react';
+import { useParams } from "react-router-dom";
+import { DefaultLayout } from "../components/layouts/DefaultLayout";
+import { client } from "../components/contentful/client";
+import { useEffect, useState } from "react";
 
 export const Recipe = () => {
   const { id } = useParams();
-  const [recipe, setRecipe] = useState('');
+  const [recipe, setRecipe] = useState("");
 
   useEffect(() => {
     client
@@ -32,10 +32,7 @@ export const Recipe = () => {
             {recipe.fields.ingredients.map((item) => {
               return (
                 <div key={recipe.fields.title[item]}>
-                  <input
-                    type="checkbox"
-                    value={item}
-                  />
+                  <input type="checkbox" value={item} />
                   {item}
                 </div>
               );
