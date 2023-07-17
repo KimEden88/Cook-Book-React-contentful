@@ -1,0 +1,81 @@
+.outerRecipe {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.recipeH {
+  color: #fdbb2d;
+}
+.recipeP {
+  color: #d98f2a;
+  margin-bottom: 3rem;
+}
+.recipeImg {
+  border: 2px solid #d98f2a;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.upperRecipe {
+  text-align: center;
+}
+
+.lowerRecipe {
+  margin-top: 4rem;
+}
+
+.container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+  border: 1px solid #fdbb2d;
+  border-radius: 5px;
+}
+.container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+.container input:checked ~ .checkmark {
+  background-color: #d98f2a;
+}
+.checkmark:after {
+  content: '';
+  position: absolute;
+  display: none;
+}
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+.container .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}

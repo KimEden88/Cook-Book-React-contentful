@@ -2,7 +2,7 @@ import { useParams } from 'react-router-dom';
 import { DefaultLayout } from '../components/layouts/DefaultLayout';
 import { client } from '../components/contentful/client';
 import { useEffect, useState } from 'react';
-import { Container } from '@mui/material';
+import './Recipe.css';
 
 export const Recipe = () => {
   const { id } = useParams();
@@ -20,35 +20,31 @@ export const Recipe = () => {
   return (
     recipe && (
       <DefaultLayout>
-        <Container
-          maxWidth="lg"
-          disp
-        >
-          <div className="outerRecipe">
-            <h1>{recipe.fields.title}</h1>
-            <div className="upperRecipe">
-              <p>{recipe.fields.description}</p>
-              <img
-                src={`https:` + recipe.fields.image.fields.file.url}
-                alt={recipe.fields.title}
-              />
-            </div>
-            <div className="lowerRecipe">
-              {recipe.fields.ingredients.map((item) => {
-                return (
-                  <div key={recipe.fields.title[item]}>
-                    <input
-                      type="checkbox"
-                      value={item}
-                    />
-                    {item}
-                  </div>
-                );
-              })}
-              <p>{recipe.fields.process}</p>
-            </div>
+        <div className="outerRecipe ">
+          <h1 className="recipeH">{recipe.fields.title}</h1>
+          <div className="upperRecipe">
+            <p className="recipeP">{recipe.fields.description}</p>
+            <img
+              className="recipeImg"
+              src={`https:` + recipe.fields.image.fields.file.url}
+              alt={recipe.fields.title}
+            />
           </div>
-        </Container>
+          <div className="lowerRecipe">
+            {recipe.fields.ingredients.map((item) => {
+              return (
+                <div key={recipe.fields.title[item]}>
+                  <label className="container">
+                    {item}
+                    <input type="checkbox" />
+                    <span className="checkmark"></span>
+                  </label>
+                </div>
+              );
+            })}
+            <p>{recipe.fields.process}</p>
+          </div>
+        </div>
       </DefaultLayout>
     )
   );

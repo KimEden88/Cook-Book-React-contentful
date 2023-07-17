@@ -1,3 +1,28 @@
-.grid {
-  margin: auto;
+.cardContent {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.title {
+  color: #fdbb2d;
+}
+.recipe {
+  color: #fdbb2d;
+  text-align: center;
+  margin-bottom: 4rem;
+  margin-top: 5rem;
+}
+
+.link {
+  text-decoration: none;
+  text-decoration: none;
+  margin-right: 1rem;
+  color: #fdbb2d;
+
+  font-weight: 600;
+  border: 2px solid #fdbb2d;
+  border-radius: 10px;
+  padding: 0.3rem 0.7rem;
 }
