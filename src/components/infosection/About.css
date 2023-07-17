@@ -1,0 +1,78 @@
+.petTitle {
+  display: flex;
+  font-size: 4rem;
+  color: white;
+  align-content: center;
+}
+
+.frame {
+  padding: 0;
+  background: linear-gradient(
+    0deg,
+    rgba(217, 143, 42, 1) 0%,
+    rgba(253, 187, 45, 1) 100%
+  );
+  border-radius: 40px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 1rem;
+  overflow: hidden;
+}
+
+.petName {
+  padding: 1.75rem;
+  margin: 0;
+  font-size: 3.5rem;
+  color: rgba(253, 187, 45, 1);
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  background-color: white;
+  text-align: center;
+}
+
+.aboutCard {
+  background: linear-gradient(
+    0deg,
+    rgba(253, 187, 45, 1) 100%,
+    rgba(217, 143, 42, 1) 0%
+  );
+  color: white;
+  max-width: 700px;
+  height: max-content;
+  margin: 4rem;
+  border: white 5px solid;
+  border-radius: 40px;
+  align-self: center;
+  text-align: center;
+}
+
+.petPics {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.petDescr {
+  padding: 2rem;
+  border-bottom: 3px white solid;
+  font-weight: 700;
+  padding-bottom: 3rem;
+}
+
+.faveFood {
+  text-align: left;
+  text-decoration: underline;
+  margin-left: 2rem;
+  font-size: 1.75rem;
+  font-weight: 700;
+}
+
+.foodAnsw {
+  text-align: center;
+  padding: 0.5rem;
+  font-size: 2.75rem;
+  font-weight: 800;
+}
