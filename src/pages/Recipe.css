@@ -4,14 +4,14 @@
   justify-content: center;
   flex-direction: column;
 }
-h1 {
+.recipeH {
   color: #fdbb2d;
 }
-p {
+.recipeP {
   color: #d98f2a;
   margin-bottom: 3rem;
 }
-img {
+.recipeImg {
   border: 2px solid #d98f2a;
   border-radius: 10px;
   overflow: hidden;

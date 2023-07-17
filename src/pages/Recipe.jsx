@@ -20,11 +20,12 @@ export const Recipe = () => {
   return (
     recipe && (
       <DefaultLayout>
-        <div className="outerRecipe">
-          <h1>{recipe.fields.title}</h1>
+        <div className="outerRecipe ">
+          <h1 className="recipeH">{recipe.fields.title}</h1>
           <div className="upperRecipe">
-            <p>{recipe.fields.description}</p>
+            <p className="recipeP">{recipe.fields.description}</p>
             <img
+              className="recipeImg"
               src={`https:` + recipe.fields.image.fields.file.url}
               alt={recipe.fields.title}
             />
