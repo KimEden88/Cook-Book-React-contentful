@@ -13,11 +13,7 @@
   align-items: center;
   justify-content: space-evenly;
   flex-direction: column;
-  background: linear-gradient(
-    0deg,
-    rgba(217, 143, 42, 1) 0%,
-    rgba(253, 187, 45, 1) 100%
-  );
+  background: linear-gradient(0deg, #d98f2a 0%, rgba(253, 187, 45, 1) 100%);
 }
 
 .workshopImage {
