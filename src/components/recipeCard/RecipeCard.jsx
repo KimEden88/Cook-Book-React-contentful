@@ -1,12 +1,12 @@
-import './RecipeCard.css';
-import { client } from '../contentful/client';
-import { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
-import Card from '@mui/material/Card';
-import CardContent from '@mui/material/CardContent';
-import CardMedia from '@mui/material/CardMedia';
-import Typography from '@mui/material/Typography';
-import { Button, CardActionArea, CardActions, Grid } from '@mui/material';
+import "./RecipeCard.css";
+import { client } from "../contentful/client";
+import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+import Card from "@mui/material/Card";
+import CardContent from "@mui/material/CardContent";
+import CardMedia from "@mui/material/CardMedia";
+import Typography from "@mui/material/Typography";
+import { Button, CardActionArea, CardActions, Grid } from "@mui/material";
 
 export const RecipeCard = () => {
   const [recipes, setRecipes] = useState(null);
@@ -20,10 +20,7 @@ export const RecipeCard = () => {
 
   return (
     <>
-      <h1
-        id="recipe"
-        className="recipe"
-      >
+      <h1 id="recipe" className="recipe">
         Our Recipes
       </h1>
       <Grid
@@ -31,7 +28,7 @@ export const RecipeCard = () => {
         container
         rowSpacing={1}
         columnSpacing={{ xs: 1, sm: 2, md: 3 }}
-        justifyContent={'center'}
+        justifyContent={"center"}
       >
         {recipes &&
           recipes.items.map((item) => (
@@ -58,24 +55,14 @@ export const RecipeCard = () => {
                   >
                     {item.fields.title}
                   </Typography>
-                  <Typography
-                    variant="body2"
-                    color="text.secondary"
-                  >
+                  <Typography variant="body2" color="text.secondary">
                     {item.fields.description}
                   </Typography>
                 </CardContent>
               </CardActionArea>
               <CardActions>
-                <Button
-                  className="btn"
-                  size="small"
-                  color="primary"
-                >
-                  <Link
-                    className="link"
-                    to={`/recipe/${item.sys.id}`}
-                  >
+                <Button className="btn" size="small" color="primary">
+                  <Link className="link" to={`/recipe/${item.sys.id}`}>
                     Go to Recipe
                   </Link>
                 </Button>
