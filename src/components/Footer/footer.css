@@ -1,41 +1,45 @@
 footer {
-    display: flex;
-    background-color: #F0E0B8;
-    color: #212529;
-    border-radius: 10px;
- 
-    
-  
-  }
-  
- 
-  
-  ul {
-    display: flex;
-    list-style: none;
-    padding-left: 0;
-  }
-  
-  li:not(:last-child) {
-    margin-right: 20px;
-  }
-  
-  a {
-    color: #212529;
-    text-decoration: none;
-  }
-  
-  a:hover {
-    color: #de9546;
-    text-decoration: underline;
-  }
-  
-  .dogimg {
-    width: 125px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #f0e0b8;
+  color: #212529;
+  border-radius: 10px;
+}
+
+ul {
+  display: flex;
+  list-style: none;
+  padding-left: 0;
+}
+
+li:not(:last-child) {
+  margin-right: 20px;
+}
+
+a {
+  color: #212529;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #de9546;
+  text-decoration: underline;
+}
+
+.linkContainer {
+}
+
+.dogimg {
+  width: 125px;
   height: 125px;
-  position: absolute;
-  right: -40rem;
-  bottom: -0rem;
-  align-self: flex-start;
+  margin-right: 3rem;
+}
+
+@media only screen and (max-width: 850px) {
+  /* For smaller: */
+  .dogimg {
+    width: 75px;
+    height: 75px;
   }
-  
+}
