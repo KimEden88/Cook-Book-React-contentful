@@ -42,8 +42,9 @@ export const RecipeCard = () => {
                 image={`https:` + item.fields.image.fields.file.url}
                 alt="Recipe"
               />
-              <CardContent>
+              <CardContent className="cardContent">
                 <Typography
+                  className="title"
                   gutterBottom
                   variant="h5"
                   component="div"
@@ -60,10 +61,16 @@ export const RecipeCard = () => {
             </CardActionArea>
             <CardActions>
               <Button
+                className="btn"
                 size="small"
                 color="primary"
               >
-                <Link to={`/recipe/${item.sys.id}`}>Go to Recipe</Link>
+                <Link
+                  className="link"
+                  to={`/recipe/${item.sys.id}`}
+                >
+                  Go to Recipe
+                </Link>
               </Button>
             </CardActions>
           </Card>
