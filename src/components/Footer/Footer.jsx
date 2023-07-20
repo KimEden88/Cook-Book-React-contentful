@@ -4,7 +4,7 @@ function Footer() {
   return (
     <footer>
       <div className="container">
-        <p>&copy; 2023 Our Colective Kitchen - All rights reserved.</p>
+        <p>&copy; 2023 Our Collective Kitchen - All rights reserved.</p>
 
         <nav className="footer-nav">
           <ul>
