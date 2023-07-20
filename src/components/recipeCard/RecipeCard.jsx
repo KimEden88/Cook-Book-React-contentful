@@ -6,7 +6,13 @@ import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
-import { Button, CardActionArea, CardActions, Grid } from "@mui/material";
+import {
+  Button,
+  CardActionArea,
+  CardActions,
+  Container,
+  Grid,
+} from "@mui/material";
 
 export const RecipeCard = () => {
   const [recipes, setRecipes] = useState(null);
@@ -19,15 +25,18 @@ export const RecipeCard = () => {
   }, []);
 
   return (
-    <>
+    <Container>
       <h1 id="recipe" className="recipe">
         Our Recipes
       </h1>
+
       <Grid
-        className="grid"
+        // className="grid"
         container
-        rowSpacing={1}
-        columnSpacing={{ xs: 1, sm: 2, md: 3 }}
+        item
+        spacing={4}
+        // rowSpacing={2}
+        // columnSpacing={{ xs: 1, sm: 2, md: 3, lg: 3 }}
         justifyContent={"center"}
       >
         {recipes &&
@@ -70,6 +79,6 @@ export const RecipeCard = () => {
             </Card>
           ))}
       </Grid>
-    </>
+    </Container>
   );
 };

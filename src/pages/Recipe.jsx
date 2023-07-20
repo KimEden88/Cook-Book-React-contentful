@@ -1,12 +1,13 @@
-import { useParams } from 'react-router-dom';
-import { DefaultLayout } from '../components/layouts/DefaultLayout';
-import { client } from '../components/contentful/client';
-import { useEffect, useState } from 'react';
-import './Recipe.css';
+import { useParams } from "react-router-dom";
+import { DefaultLayout } from "../components/layouts/DefaultLayout";
+import { client } from "../components/contentful/client";
+import { useEffect, useState } from "react";
+import "./Recipe.css";
+import "../components/layouts/Footer/dog.png";
 
 export const Recipe = () => {
   const { id } = useParams();
-  const [recipe, setRecipe] = useState('');
+  const [recipe, setRecipe] = useState("");
 
   useEffect(() => {
     client

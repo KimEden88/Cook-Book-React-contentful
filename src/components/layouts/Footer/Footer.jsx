@@ -1,8 +1,9 @@
-import '../Footer/footer.css';
+import "./footer.css";
+import dog from "./dog.png";
 
 function Footer() {
   return (
-    <footer>
+    <footer className="footer">
       <div className="container">
         <p>&copy; 2023 Our Collective Kitchen - All rights reserved.</p>
 
@@ -20,11 +21,7 @@ function Footer() {
           </ul>
         </nav>
       </div>
-      <img
-        className="dogimg"
-        src="src/components/Footer/dog.png"
-        alt="My Image"
-      />
+      <img className="dogimg" src={dog} alt="My Image" />
     </footer>
   );
 }

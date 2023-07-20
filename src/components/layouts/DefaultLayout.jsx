@@ -1,6 +1,7 @@
-import { Navigation } from '../navigation/Navigation';
-import { Footer } from '../Footer/Footer';
-import './DefaultLayout.css';
+import { Navigation } from "../navigation/Navigation";
+import { Footer } from "./Footer/Footer";
+
+import "./DefaultLayout.css";
 
 export const DefaultLayout = ({ children }) => {
   return (
@@ -11,7 +12,7 @@ export const DefaultLayout = ({ children }) => {
       <main className="main">{children}</main>
 
       <footer>
-        <Footer />
+        <Footer className="footer" />
       </footer>
     </div>
   );
